@@ -1,0 +1,22 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+out/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Data directory
+data/
+
+# Large data files
+data/ngrams/top_49887_words.csv
+data/ngrams/top_14377_words.csv 
