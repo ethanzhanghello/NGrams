@@ -80,24 +80,11 @@ All core components are modularized:
 
 ---
 
-## 🛟 Support Information
-
-For questions, please open a GitHub issue or reach out via email at:  
-📩 `your-email@example.com`
-
----
-
 ## 🗺️ Project Roadmap
 
 - ✅ Plot word trends by year
 - 🔄 Add multi-word plotting on one graph
 - 🔜 Include CSV upload interface for custom datasets
-
----
-
-## 📈 Project Status
-
-**Active** – Currently under development with additional features in progress.
 
 ---
 
@@ -108,15 +95,6 @@ Contributions are welcome! Please:
 2. Create a new branch
 3. Submit a pull request with a clear description
 4. Follow JavaDoc and existing code conventions
-
----
-
-## 🙌 Acknowledgments
-
-Thanks to:
-- Princeton’s WordNet/N-gram datasets
-- Java open-source documentation
-- CS61B inspiration
 
 ---
 
