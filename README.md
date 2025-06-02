@@ -1,80 +1,125 @@
-# NGrams Project
+# 📊 N-Grams Time Series Analyzer (Java)
 
-This project analyzes word frequency data from Google Books Ngram dataset, allowing users to track the usage of words over time and visualize their trends.
+## 📌 Table of Contents
 
-## Project Structure
+- [Project Description](#project-description)
+- [Technologies Used](#technologies-used)
+- [Requirements](#requirements)
+- [Installation Instructions](#installation-instructions)
+- [Usage Instructions](#usage-instructions)
+- [Documentation](#documentation)
+- [Visuals](#visuals)
+- [Support Information](#support-information)
+- [Project Roadmap](#project-roadmap)
+- [Project Status](#project-status)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Acknowledgments](#acknowledgments)
+- [License Information](#license-information)
 
-```
-NGrams/
-├── data/
-│   └── ngrams/          # Contains data files (CSV format)
-├── lib/                 # External dependencies
-├── src/                 # Source code
-│   ├── browser/        # Web interface components
-│   ├── main/           # Main application code
-│   ├── ngrams/         # Core N-gram analysis code
-│   ├── plotting/       # Data visualization
-│   └── utils/          # Utility functions
-├── static/             # Web interface static files
-└── tests/              # Unit tests
-```
+---
 
-## Required Data Files
+## 📖 Project Description
 
-The following data files are required to run the project:
-- `total_counts.csv`
-- `very_short.csv`
-- `less_short.csv`
-- `words_that_start_with_q.csv`
-- `frequency-EECS.csv`
+This is a Java-based application that mimics Google’s Ngram Viewer. It analyzes historical word usage trends using large datasets and plots the frequency of terms over time. Users can query word(s) and observe their linguistic trends in a dynamic, visual interface.
 
-Large data files (not included in repository):
-- `top_14377_words.csv`
-- `top_49887_words.csv`
+---
 
-## Setup Instructions
+## 💻 Technologies Used
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ethanzhanghello/NGrams.git
-   cd NGrams
-   ```
+- Java 8+
+- AWT & Swing for visual plotting
+- Java Collections API
+- Custom HTTP server and request handlers
 
-2. Add the required large data files to the `data/ngrams/` directory:
-   - `top_14377_words.csv`
-   - `top_49887_words.csv`
+---
 
-3. Open the project in IntelliJ IDEA:
-   - File -> Open -> Select the NGrams directory
-   - IntelliJ will recognize it as a project and set up the dependencies
+## 📋 Requirements
 
-4. Run the project:
-   - The main entry point is `src/main/Main.java`
-   - Run the main method to start the web server
-   - Visit http://localhost:4567/ngordnet_2a.html in your browser
+- Java JDK 8 or later
+- A Java IDE like IntelliJ or Eclipse
+- N-Gram datasets in CSV format (word count and total counts per year)
 
-## Features
+---
 
-- Track word frequency over time
-- Visualize word usage trends
-- Compare multiple words
-- Web interface for easy interaction
-- Support for various time ranges
+## ⚙️ Installation Instructions
 
-## Dependencies
-
-The project uses several libraries (included in the `lib/` directory):
-- Princeton's algs4 library
-- JUnit for testing
-- XChart for plotting
-- Spark for web server
-- SLF4J for logging
-- Gson for JSON handling
-
-## Testing
-
-Run the tests using JUnit:
 ```bash
-javac -cp ".:lib/*" tests/*.java
-java -cp ".:lib/*" org.junit.platform.console.ConsoleLauncher --scan-classpath
-``` 
+git clone https://github.com/your-username/ngrams-analyzer.git
+cd ngrams-analyzer
+```
+
+Then open in your IDE, ensure all files are in the same package, and run `NgordnetServer.java`.
+
+---
+
+## 🕹️ Usage Instructions
+
+- Start the server: run `NgordnetServer.java`
+- Open browser and visit: `http://localhost:4567`
+- Use a URL query like:
+  ```
+  /ngordnet?words=peace,war&startYear=1900&endYear=2000
+  ```
+- View a line graph comparing historical frequencies.
+
+---
+
+## 📚 Documentation
+
+All core components are modularized:
+- `NGramMap.java` – Loads and queries the dataset
+- `TimeSeries.java` – Models year-to-frequency mappings
+- `NgordnetQueryHandler.java` – Parses URL input and routes requests
+- `Plotter.java` – Renders output as plots
+
+---
+
+## 🖼️ Visuals
+
+*(Include screenshots of plotted results or UI once available)*
+
+---
+
+## 🛟 Support Information
+
+For questions, please open a GitHub issue or reach out via email at:  
+📩 `your-email@example.com`
+
+---
+
+## 🗺️ Project Roadmap
+
+- ✅ Plot word trends by year
+- 🔄 Add multi-word plotting on one graph
+- 🔜 Include CSV upload interface for custom datasets
+
+---
+
+## 📈 Project Status
+
+**Active** – Currently under development with additional features in progress.
+
+---
+
+## 🤝 Contribution Guidelines
+
+Contributions are welcome! Please:
+1. Fork the repo
+2. Create a new branch
+3. Submit a pull request with a clear description
+4. Follow JavaDoc and existing code conventions
+
+---
+
+## 🙌 Acknowledgments
+
+Thanks to:
+- Princeton’s WordNet/N-gram datasets
+- Java open-source documentation
+- CS61B inspiration
+
+---
+
+## 📜 License Information
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more information.
