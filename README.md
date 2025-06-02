@@ -9,11 +9,8 @@
 - [Usage Instructions](#usage-instructions)
 - [Documentation](#documentation)
 - [Visuals](#visuals)
-- [Support Information](#support-information)
 - [Project Roadmap](#project-roadmap)
-- [Project Status](#project-status)
 - [Contribution Guidelines](#contribution-guidelines)
-- [Acknowledgments](#acknowledgments)
 - [License Information](#license-information)
 
 ---
